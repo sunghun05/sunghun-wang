@@ -104,7 +104,7 @@ body {
   bottom: 0;
   right: 2rem;
   width: 400px;
-  height: 90vh;
+  height: 90%;
   /* How far it slides up */
   z-index: 10;
   border: 1px solid var(--primary-border);
@@ -126,6 +126,7 @@ body {
 }
 
 .sidebar-header {
+  padding-top: min(1.5rem, calc(3.5rem + env(safe-area-inset-top)));
   padding: 1.5rem;
   border-bottom: 1px solid var(--primary-border);
 
@@ -210,7 +211,7 @@ a:hover {
   border-radius: 16px;
   width: 100%;
   max-width: 800px;
-  max-height: 90vh;
+  max-height: 90dvh;
   overflow-y: auto;
   padding: 3.5rem;
   position: relative;
@@ -226,9 +227,9 @@ a:hover {
   position: fixed;
   top: 1.5rem;
   right: 1.5rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: #e0e0e0;
   border: none;
-  color: #fff;
+  color: #000;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -241,7 +242,7 @@ a:hover {
 }
 
 .close-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: #bdbdbd;
 }
 
 @keyframes fadeIn {
@@ -484,7 +485,7 @@ a:hover {
     bottom: 0;
     right: 0;
     width: 100%;
-    height: 90vh;
+    height: 90dvh;
     /* Full screen on mobile when active */
     border-radius: 16px 16px 0 0;
     border-left: none;
@@ -505,7 +506,7 @@ a:hover {
 
   .modal-content {
     width: 95%;
-    max-height: 85vh;
+    max-height: 95dvh;
     padding: 1.5rem;
   }
 
@@ -516,5 +517,42 @@ a:hover {
   .portfolio-toggle-btn {
     font-size: 0.75rem;
     padding: 0.4rem 0.7rem;
+    top: min(4.5rem, calc(1.5rem + env(safe-area-inset-top)));
+    left: calc(1rem + env(safe-area-inset-left));
   }
+
+  .graph-controls {
+    top: min(4.5rem, calc(1.5rem + env(safe-area-inset-top))) !important;
+    right: calc(1rem + env(safe-area-inset-right)) !important;
+  }
+}
+
+.graph-controls {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.all-posts-btn {
+  background: var(--card-bg-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--primary-border);
+  color: var(--text-color);
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.all-posts-btn:hover {
+  background: var(--accent-color);
+  color: #fff;
 }

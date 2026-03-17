@@ -80,7 +80,7 @@ export default function OntologyGraph({ graphData, onNodeClick, theme, onShowAll
                 }
             });
         }
-        console.log(nodeIds, links);
+        // console.log(nodeIds, links);
         return { highlightNodeIds: nodeIds, highlightLinks: links };
     }, [hoveredNode, graphData]);
 
@@ -91,7 +91,6 @@ export default function OntologyGraph({ graphData, onNodeClick, theme, onShowAll
 
         // Dim nodes not in the highlight set when something is hovered
         const shouldDim = hoveredNode !== null && !highlightNodeIds.has(node.id);
-
 
 
         // ---- Circle with glow ----
@@ -179,27 +178,11 @@ export default function OntologyGraph({ graphData, onNodeClick, theme, onShowAll
 
     return (
         <div ref={containerRef} style={{ width: '100%', height: '100%', position: 'relative' }}>
-            <div style={{ position: 'absolute', top: '1rem', right: '1rem', zIndex: 10, display: 'flex', gap: '0.4rem' }}>
+            <div className="graph-controls">
                 <button
+                    className="all-posts-btn"
                     onClick={onShowAllPosts}
                     aria-label="View All Posts"
-                    style={{
-                        background: 'var(--card-bg-glass)',
-                        backdropFilter: 'blur(10px)',
-                        WebkitBackdropFilter: 'blur(10px)',
-                        border: '1px solid var(--primary-border)',
-                        color: 'var(--text-color)',
-                        padding: '0.5rem 0.9rem',
-                        borderRadius: '8px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        cursor: 'pointer',
-                        fontSize: '0.85rem',
-                        fontWeight: 500,
-                        transition: 'background 0.2s, transform 0.2s',
-                    }}
-                    onMouseOver={e => { e.currentTarget.style.background = 'var(--accent-color)'; e.currentTarget.style.color = '#fff'; }}
-                    onMouseOut={e => { e.currentTarget.style.background = 'var(--card-bg-glass)'; e.currentTarget.style.color = 'var(--text-color)'; }}
                 >
                     All Posts
                 </button>
