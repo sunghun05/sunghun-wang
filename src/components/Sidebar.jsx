@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Sun, Moon, ChevronDown } from 'lucide-react';
 
-export default function Sidebar({ selectedNode, posts, graphData, showAllPosts, onPostClick, theme, onToggleTheme, onClose }) {
+export default function Sidebar({ selectedNode, posts, graphData, showAllPosts, theme, onToggleTheme, onClose }) {
+    const navigate = useNavigate();
+
     // Find adjacent (neighbor) topics for the selected node
     const getAdjacentTopics = () => {
         if (!selectedNode || !graphData) return [];
@@ -25,7 +28,7 @@ export default function Sidebar({ selectedNode, posts, graphData, showAllPosts, 
         : [];
 
     const PostCard = ({ post }) => (
-        <div className="glass-card" onClick={() => onPostClick(post)}>
+        <div className="glass-card" onClick={() => navigate(`/post/${post.id}`)}>
             <h3 style={{ fontSize: '1.2rem', marginBottom: '0.2rem' }}>{post.title}</h3>
             {post.date && <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>{post.date}</p>}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>

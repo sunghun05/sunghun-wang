@@ -3,7 +3,7 @@ title: "머신러닝 이론 강의 정리 - Intro"
 date: "2025-10-30"
 description: "머신러닝 이론 강의를 정리한 내용입니다."
 slug: "ml-theory-intro"
-topic: "Machine Learning"
+topics: ["Machine Learning"]
 pinned: false
 ---
 
