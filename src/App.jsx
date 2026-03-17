@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import OntologyGraph from './components/OntologyGraph';
 import Sidebar from './components/Sidebar';
-import PostModal from './components/PostModal';
+import PostPage from './components/PostPage';
 import PortfolioPanel from './components/PortfolioPanel';
 import { getPostsAndGraphData } from './utils/markdownParser';
 import { User } from 'lucide-react';
 
-function App() {
+function HomePage() {
   const [graphData, setGraphData] = useState(null);
   const [posts, setPosts] = useState([]);
   const [selectedNode, setSelectedNode] = useState(null);
-  const [selectedPost, setSelectedPost] = useState(null);
   const [theme, setTheme] = useState('light');
   const [portfolioOpen, setPortfolioOpen] = useState(false);
   const [showAllPosts, setShowAllPosts] = useState(true);
@@ -66,7 +66,6 @@ function App() {
         posts={posts}
         graphData={graphData}
         showAllPosts={showAllPosts}
-        onPostClick={setSelectedPost}
         theme={theme}
         onToggleTheme={toggleTheme}
         onClose={() => {
@@ -75,16 +74,32 @@ function App() {
         }}
       />
 
-      <PostModal
-        post={selectedPost}
-        onClose={() => setSelectedPost(null)}
-      />
-
       <PortfolioPanel
         isOpen={portfolioOpen}
         onClose={() => setPortfolioOpen(false)}
       />
+
+      {/* Hidden SEO nav — invisible to users but crawlable by search engines */}
+      <nav aria-label="All blog posts" className="seo-nav">
+        <h2>Blog Posts</h2>
+        <ul>
+          {posts.map(post => (
+            <li key={post.id}>
+              <a href={`/post/${post.id}`}>{post.title}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/post/:slug" element={<PostPage />} />
+    </Routes>
   );
 }
 

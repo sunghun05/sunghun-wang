@@ -556,3 +556,97 @@ a:hover {
   background: var(--accent-color);
   color: #fff;
 }
+
+/* ---- Post Page (full-page view) ---- */
+.post-page {
+  min-height: 100vh;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.post-page-top-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.post-page-content {
+  width: 100%;
+  max-width: 800px;
+  padding-bottom: 4rem;
+}
+
+.post-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--card-bg-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--primary-border);
+  color: var(--text-color);
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.2s;
+
+}
+
+.post-back-btn:hover {
+  background: var(--accent-color);
+  color: #fff;
+  transform: scale(1.03);
+}
+
+.post-page-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--primary-border);
+}
+
+.post-page-header h1 {
+  font-size: 2.2rem;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+.post-page-date {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+}
+
+.post-page-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.post-page-topic-tag {
+  background: rgba(88, 166, 255, 0.2);
+  color: var(--accent-color);
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Hidden SEO nav — visible to crawlers but not users */
+.seo-nav {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
