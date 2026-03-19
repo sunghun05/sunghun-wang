@@ -527,7 +527,7 @@ Dataflow Compiler 사용법은 다른 블로그에서 포스팅한다.
 
 이렇게 모델 컴파일이 완료되면, 모델명.hef 파일을 얻을 수 있게 되고, Hailo Runtime Environment(Hailort)에서 실행할 수 있게 된다.
 
-링크 https://github.com/hailo-ai에 다양한 라이브러리가 오픈소스로 공개되어 있는데, 자주 쓰이는 라이브러리는 아래와 같다.
+링크 https://github.com/hailo-ai 에 다양한 라이브러리가 오픈소스로 공개되어 있는데, 자주 쓰이는 라이브러리는 아래와 같다.
 
 # Hailo Model Zoo
 앞서 설명한 Hailo가 지원하는 모델(resnet, mobilenet, efficient net, yolo, ...)들의 컴파일 과정에 쓰이는 정보, 실제 모델을 담고 있다.
