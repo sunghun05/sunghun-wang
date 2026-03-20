@@ -26,8 +26,10 @@ const urls = [
     // Individual posts
     ...mdFiles.map(f => {
         const slug = f.replace('.md', '');
+        // Escape XML special characters in the slug
+        const safeSlug = slug.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
         return `  <url>
-    <loc>${SITE_URL}/post/${slug}</loc>
+    <loc>${SITE_URL}/post/${safeSlug}</loc>
     <lastmod>${today}</lastmod>
     <priority>0.8</priority>
   </url>`;
@@ -35,7 +37,7 @@ const urls = [
 ];
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemlan.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.join('\n')}
 </urlset>`;
 

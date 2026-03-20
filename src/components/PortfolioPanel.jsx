@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { profile, about, researchInterests, career, papers, projects, social } from '../data';
+import { profile, about, researchInterests, career, awards, papers, projects, social } from '../data';
 import { Github, Linkedin, Globe, Mail, X, Languages } from 'lucide-react';
 
 export default function PortfolioPanel({ isOpen, onClose }) {
@@ -66,6 +66,18 @@ export default function PortfolioPanel({ isOpen, onClose }) {
                                 <h3>{c.role}</h3>
                                 <p className="portfolio-meta">{c.company} · {c.duration}</p>
                                 {c.description && <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>{c.description}</p>}
+                            </div>
+                        ))}
+                    </section>
+
+                    {/* Awards */}
+                    <section className="portfolio-section">
+                        <h2>Awards</h2>
+                        {awards.map((a, i) => (
+                            <div key={i} className="portfolio-item">
+                                <h3>🏆 {a.title}</h3>
+                                <p className="portfolio-meta">{a.organization} · {a.date}</p>
+                                {a.description && <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>{a.description}</p>}
                             </div>
                         ))}
                     </section>

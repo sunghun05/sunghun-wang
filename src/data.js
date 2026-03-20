@@ -57,6 +57,33 @@ export const projects = [
     },
 ];
 
+export const awards = [
+    {
+        title: "Academic Excellence Award",
+        organization: "Soonchunhyang University",
+        date: "2024-1",
+        description: "성적 우수상 (Dean's List)",
+    },
+    {
+        title: "Academic Excellence Award",
+        organization: "Soonchunhyang University",
+        date: "2024-2",
+        description: "성적 우수상 (Dean's List)",
+    },
+    {
+        title: "Best Academic Award",
+        organization: "Soonchunhyang University",
+        date: "2025-1",
+        description: "성적 최우수상 (Dean's List)",
+    },
+    {
+        title: "Academic Excellence Award",
+        organization: "Soonchunhyang University",
+        date: "2025-2",
+        description: "성적 우수상 (Dean's List)",
+    }
+];
+
 export const social = {
     github: "https://github.com/sunghun05",
     blog: "https://sunghun05.github.io",
