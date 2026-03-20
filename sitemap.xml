@@ -2,57 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sunghun05.github.io/</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://sunghun05.github.io/post/001_Hailo_Intro</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sunghun05.github.io/post/001_ML_Intro</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sunghun05.github.io/post/002_Hailo_Compile</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sunghun05.github.io/post/002_ML_linear_regression</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sunghun05.github.io/post/003_ML_gradient_descent</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sunghun05.github.io/post/004_ML_maximum_likelihood_estimation</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sunghun05.github.io/post/005_ML_Locally_Weighted_LR</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sunghun05.github.io/post/006_ML_Classification&amp;Logistic_Regression</loc>
-    <lastmod>2026-03-19</lastmod>
+    <loc>https://sunghun05.github.io/post/006_ML_Classification_Logistic_Regression</loc>
+    <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sunghun05.github.io/post/007_ML_Perceptron_Learning_Alg</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sunghun05.github.io/post/008_ML_Generative_Learning_Algorithm</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>
