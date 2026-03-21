@@ -3,7 +3,7 @@ title: "머신러닝 이론 - 2.1 경사 하강법 (Gradient Descent)"
 date: "2026-01-25"
 description: "머신러닝 이론 강의를 정리한 내용입니다."
 slug: "gradient_descent"
-topics: ["Machine Learning", "Mathematical Foundations"]
+topics: ["Machine Learning", "Mathematical Foundations", "Computer Optimization"]
 ---
 
 머신러닝 이론 포스팅은 Stanford CS229 (Andrew Ng)과 대학교 강의를 기반으로 정리합니다.
