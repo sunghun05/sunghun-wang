@@ -3,7 +3,7 @@ title: "머신러닝 이론 - 2.2 Maximum Likelihood Estimation (MLE)"
 date: "2026-02-02"
 description: "머신러닝 이론 강의를 정리한 내용입니다."
 slug: "maximum_likelihood_estimation"
-topics: ["Machine Learning", "Mathematical Foundations"]
+topics: ["Machine Learning", "Mathematical Foundations", "Probability&Statistics", "Information Theory"]
 pinned: false
 ---
 
