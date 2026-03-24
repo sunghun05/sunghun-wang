@@ -3,7 +3,7 @@ title: "머신러닝 이론 - 4. Generative Learning Algorithms"
 date: "2026-03-04"
 description: "머신러닝 이론 강의를 정리한 내용입니다."
 slug: "Generative_Learning_Alg"
-topics: ["Machine Learning", "Mathematical Foundations", "Probability"]
+topics: ["Machine Learning", "Mathematical Foundations", "Probability&Statistics"]
 pinned: false
 ---
 

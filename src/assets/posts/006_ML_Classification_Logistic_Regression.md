@@ -3,7 +3,7 @@ title: "머신러닝 이론 - 3. Classification & Logistic Regression"
 date: "2026-02-15"
 description: "머신러닝 이론 강의를 정리한 내용입니다."
 slug: "classification_logistic_regression"
-topics: ["Machine Learning", "Probability"]
+topics: ["Machine Learning", "Probability&Statistics"]
 pinned: true
 ---
 
