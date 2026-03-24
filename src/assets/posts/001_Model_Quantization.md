@@ -3,7 +3,7 @@ title: "Post-Training Quantization"
 date: "2026-03-22"
 description: ""
 slug: ""
-topics: ["Quantization", "Edge AI", "Deep Learning", "Mathematical Foundations"]
+topics: ["Model Quantization", "Edge AI", "Deep Learning", "Mathematical Foundations"]
 pinned: false
 ---
 
