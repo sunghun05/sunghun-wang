@@ -4,12 +4,14 @@ import { RefreshCw, List } from 'lucide-react';
 import { forceCollide, forceX, forceY } from 'd3-force';
 
 // Node sizing
-const NODE_R = 7;
-const NODE_R_HOVER = 9;
+const NODE_R = 8;
+const NODE_R_HOVER = 9.5;
+const LERP_SPEED = 0.5; // 0–1, higher = faster transition
 
 export default function OntologyGraph({ graphData, onNodeClick, theme, onShowAllPosts }) {
     const fgRef = useRef();
     const containerRef = useRef();
+    const nodeRadii = useRef({}); // { [nodeId]: currentAnimatedRadius }
     const [dimensions, setDimensions] = useState({ width: 800, height: 600 });
     const [hoveredNode, setHoveredNode] = useState(null); // node object or null
 
@@ -44,7 +46,7 @@ export default function OntologyGraph({ graphData, onNodeClick, theme, onShowAll
     useEffect(() => {
         if (fgRef.current) {
             fgRef.current.d3Force('charge').strength(isMobile ? -200 : -200);
-            fgRef.current.d3Force('link').distance(isMobile ? 60 : 120);
+            fgRef.current.d3Force('link').distance(isMobile ? 120 : 150);
             fgRef.current.d3Force('collide', forceCollide(isMobile ? 30 : 50));
             // Add a weak center gravity so disconnected subgraphs don't fly off to infinity
             fgRef.current.d3Force('x', fgRef.current.d3Force('x') || forceX(0).strength(0.05));
@@ -87,7 +89,12 @@ export default function OntologyGraph({ graphData, onNodeClick, theme, onShowAll
     // Custom node drawing: circle + label below
     const paintNode = useCallback((node, ctx, globalScale) => {
         const isHovered = hoveredNode && hoveredNode.id === node.id;
-        const r = isHovered ? NODE_R_HOVER : NODE_R;
+        const targetR = isHovered ? NODE_R_HOVER : NODE_R;
+
+        // Smooth radius transition via lerp
+        const prevR = nodeRadii.current[node.id] ?? NODE_R;
+        const r = prevR + (targetR - prevR) * LERP_SPEED;
+        nodeRadii.current[node.id] = r;
 
         // Dim nodes not in the highlight set when something is hovered
         const shouldDim = hoveredNode !== null && !highlightNodeIds.has(node.id);
@@ -204,6 +211,7 @@ export default function OntologyGraph({ graphData, onNodeClick, theme, onShowAll
                 nodePointerAreaPaint={paintPointerArea}
                 linkCanvasObject={paintLink}
                 onNodeClick={onNodeClick}
+                nodeLabel={() => ''}
                 onNodeHover={node => setHoveredNode(node || null)}
                 enableNodeDrag={true}
                 enableZoomInteraction={true}
