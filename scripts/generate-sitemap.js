@@ -7,7 +7,7 @@ import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const SITE_URL = 'https://sunghun05.github.io';
+const SITE_URL = 'https://sunghun-wang.pages.dev';
 
 const postsDir = resolve(__dirname, '../src/assets/posts');
 const distDir = resolve(__dirname, '../dist');

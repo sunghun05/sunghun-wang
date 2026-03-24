@@ -86,7 +86,7 @@ export const awards = [
 
 export const social = {
     github: "https://github.com/sunghun05",
-    blog: "https://sunghun05.github.io",
+    blog: "https://sunghun-wang.pages.dev",
 };
 
 export const profileTable = [
