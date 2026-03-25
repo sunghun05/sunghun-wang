@@ -6,6 +6,8 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import { ArrowLeft, Sun, Moon } from 'lucide-react';
 import { getPostsAndGraphData } from '../utils/markdownParser';
+import ViewCounter from './ViewCounter';
+import Comments from './Comments';
 
 export default function PostPage() {
     const { slug } = useParams();
@@ -74,9 +76,12 @@ export default function PostPage() {
                 <article>
                     <header className="post-page-header">
                         <h1>{post.title}</h1>
-                        {post.date && (
-                            <time className="post-page-date">{post.date}</time>
-                        )}
+                        <div className="post-page-meta">
+                            {post.date && (
+                                <time className="post-page-date">{post.date}</time>
+                            )}
+                            <ViewCounter slug={slug} />
+                        </div>
                         <div className="post-page-topics">
                             {post.topics.map(topic => (
                                 <span key={topic} className="post-page-topic-tag">
@@ -118,6 +123,9 @@ export default function PostPage() {
                         </ReactMarkdown>
                     </div>
                 </article>
+                
+                <hr className="post-divider" />
+                <Comments slug={slug} />
             </div>
         </div>
     );

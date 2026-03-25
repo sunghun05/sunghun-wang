@@ -1,0 +1,8 @@
+name = "new_blog"
+pages_build_output_dir = "dist"
+
+[[d1_databases]]
+binding = "DB" # Available in API routes as env.DB
+database_name = "blog-db"
+database_id = "3b750b90-f1d9-40c0-abc2-c17bebc21f6b"
+migrations_dir = "migrations"
